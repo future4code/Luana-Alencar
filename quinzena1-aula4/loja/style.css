@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(238, 222, 194);
+    font-family: 'Architects Daughter', cursive;
+}
+
+header{
+    height: 30vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+h3{
+    text-align: center;
+}
+
+.menu{
+    background-color: whitesmoke;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    height: 30px;
+    
+}
+
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+.menu li {
+    list-style: none; 
+  }
+
+.menu a{
+    display: block;
+    padding: 10px 20px;
+  }
+
+.site-title{
+    font-size: 3em;
+    font-family: 'Dancing Script', cursive;
+    display: table;
+    margin: 0 auto;
+}
+
+
+ img{
+    width: 50px;
+    position: center;
+}
+
+.img-estoque{
+    height: 180px;
+    width: 240px;
+}
+.contato {
+    text-align: center;
+}
+
+.footer {
+    background-color: whitesmoke;
+    position: fixed;
+    bottom:0;
+    width:100vw;
+    height: 30px;
+    text-align: center;
+    padding: 10px 20px;
+    
+}
