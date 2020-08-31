@@ -1,0 +1,221 @@
+
+
+/*Serve para deixar o menu em toda tela, sem espaços em volta*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    background-color: rgb(243, 248, 174);
+}
+    body{
+
+            background: rgb(153, 149, 149);
+            background-size: 100vh;
+            font-family: 'Source Code Pro', monospace;
+            height: 100vh;
+            font-size: 12px;
+}
+
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body{
+    font-size: 14px;
+  }    
+
+}
+/* breakpoint quebras de tela*/
+@media (min-width: 600px) {
+  body{
+    font-size: 18px;
+  } 
+
+
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu{
+    background: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+
+}
+
+.menu ul{
+display: flex;
+justify-content: space-around;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 1s, color 1s;
+
+}
+
+/* faz a cor amarelo aparecer quando passa o mouse em cima do menu*/
+.menu a:active,
+.menu a:hover{
+    background-color: rgb(251, 255, 192);
+    color: black;
+}
+
+a {
+  color: teal;  
+  text-decoration: none;  
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+.site-subtitle,
+.site-title{
+    color: whitesmoke;
+    text-align: center;
+}
+
+.site-title{
+    font-size: 4em;
+    font-family: 'Gloria Hallelujah', cursive;
+
+}
+
+.site-subtitle{
+    font-style: italic; 
+    font-family: 'Gloria Hallelujah', cursive;
+    line-height: 1.8em
+}
+
+
+.sobre,
+.contato,
+.formacao,
+.portfolio{
+    padding: 4em;
+    min-height: 100vh;
+}
+
+/*deixa o texto alinhado do tamanho da tela, junto com as imagens*/
+@media(min-width: 500px){
+ 
+.sobre,
+.contato,
+.formacao,
+.portfolio{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.home,h2
+.sobre,h2
+.contato,h2
+.formacao,h2
+.portfolio h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    margin-bottom:1.5em;
+    font-size: 2em; 
+}
+
+.formacao p,
+.sobre p{
+    color:black;
+    margin-bottom:1.4em; 
+    text-indent: 1.4em;
+    text-align: justify;
+}
+
+.sobre a {
+    color: black;
+}
+
+.sobre a:hover{
+    color: black;
+}
+
+/* faz o texto ficar em volta da foto perfil*/
+.sobre .avatar{
+    float: right;
+    margin-left: 2em;
+}
+
+/* faz a img ficar em formatos geometricos*/
+.sobre .avatar img{
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+
+/*img*/
+.portfolio .grid{
+    display: grid;
+    gap: 2em;
+
+}
+
+@media(min-width: 560px){
+.portfolio .grid{
+    grid-template-columns: 240px 240px 240px;
+    
+}
+
+/*img e txt centralizados*/
+.portfolio figure{
+    text-align: center;
+}
+
+.sobre h2,
+.formacao h2,
+.portfolio h2,
+.contato h2{
+    margin-bottom: 2em;
+}
+
+.img-portfolio{
+    height: 180px;
+    width: 240px;
+    object-fit: cover; /*ocupam o msm espaço 180 e 220*/
+    object-position: left bottom; 
+    transition: transform 500ms;
+    
+}
+
+.img-portfolio:hover{
+     transform: scale(1.2) rotate(-1deg);
+
+}
+
+.contato .icons{
+text-align: center;
+}
+
+.contato a{
+    color:rgb(153, 149, 149);
+    font-size: 4em;
+    transition: text-shadow 2s;
+
+}
+
+.contato a:active,
+.contato a:hover{
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(73,247,166);
+}
